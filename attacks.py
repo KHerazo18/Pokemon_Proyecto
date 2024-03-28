@@ -30,7 +30,7 @@ class Ataque_Rapido (stats):
 class Placaje (stats):
     nombre = 'Placaje'
     tipo = 'Físico'
-    potencia = 40
+    potencia = 1000
     precision = 100
 
 class Tacleada (stats):

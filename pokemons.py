@@ -3,7 +3,7 @@ import attacks as at
 import random
 import time
 
-delay = 1.5
+DELAY = 1.5
 
 class stats:
     def __init__(self):
@@ -78,16 +78,16 @@ class Battle(Pokemon):
         def turno_pj(pk_01:Pokemon, pk_02:Pokemon):
             if pk_01.ver_ps() > 0 and pk_02.ver_ps() > 0:
                 print(f' ⚔️  \033[1m¡Ataca {pk_01.ver_nombre()}!\033[0m⚔️\n')
-                time.sleep(delay)
+                time.sleep(DELAY)
                 pk_01.ver_habilidades()
                 op = int(input(f'\033[1m¡Elije una habilidad!\033[0m\n'))-1 
                 if op >= 0 and op < 4:
                     print('➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖')
                     print(f' \033[1m{at.Attacks(pk_01.pj.listAtaques[op]).atq.nombre}\033[0m ha realizado \033[1m{pk_01.atacar(pk_02,op)}\033[0m de daño!')
                     print('➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖\n')
-                    time.sleep(delay)
+                    time.sleep(DELAY)
                     self.status()
-                    time.sleep(delay)
+                    time.sleep(DELAY)
                 else:
                     print("ERROR: Sea serio pelao'")
             else:
@@ -96,14 +96,14 @@ class Battle(Pokemon):
         def turno_pc(pk_01:Pokemon, pk_02:Pokemon):
             if pk_01.ver_ps() > 0 and pk_02.ver_ps() > 0:
                 print(f' ⚔️  \033[1m¡Ataca {pk_01.ver_nombre()}!\033[0m⚔️\n')
-                time.sleep(delay)
+                time.sleep(DELAY)
                 op = random.randint(0,3) 
                 print('➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖')
                 print(f' \033[1m{at.Attacks(pk_01.pj.listAtaques[op]).atq.nombre}\033[0m ha realizado \033[1m{pk_01.atacar(pk_02,op)}\033[0m de daño!')
                 print('➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖\n')
-                time.sleep(delay)
+                time.sleep(DELAY)
                 self.status()
-                time.sleep(delay)
+                time.sleep(DELAY)
             else:
                 pass
         pk_01 = self.pj
