@@ -1,13 +1,10 @@
 # Info sacada de https://www.pokexperto.net/index2.php
 
-class stats: 
+class stats:
     nombre = ''
     tipo = ''  
     potencia = 0
     precision = 0
-
-    def __str__(self):
-        pass
 
 class Impactrueno (stats):
     nombre = 'Impactrueno'
@@ -30,7 +27,7 @@ class Ataque_Rapido (stats):
 class Placaje (stats):
     nombre = 'Placaje'
     tipo = 'Físico'
-    potencia = 1000
+    potencia = 40
     precision = 100
 
 class Tacleada (stats):
